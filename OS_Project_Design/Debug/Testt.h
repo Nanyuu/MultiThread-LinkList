@@ -6,6 +6,13 @@
 
 
 bool Test_Insert(NodeList &L);
-//test for Insert 
+//test for Insert; 
 
 bool Test_Delete(NodeList &L);
+//test for Ddelete;
+
+bool Test_Clear(NodeList &L);
+//test for clear the list;
+
+void Test_out();
+//control the output

@@ -28,7 +28,7 @@ bool Test_Insert(NodeList &L)
 	}
 	else
 	{
-		std::cout << "                    insert Test Successed" << endl;
+		std::cout << "                    insert Test Success" << endl;
 		return TRUE;
 	}
 }
@@ -56,7 +56,29 @@ bool Test_Delete(NodeList &L)
 	}
 	else
 	{
-		std::cout << "            Delete success";
+		std::cout << "            Delete success" << endl;;
 		return TRUE;
 	}
 }
+
+bool Test_Clear(NodeList &L)
+{
+	int InitLength = list_length(L);
+	if (InitLength == 0)
+	{
+		std::cout << "     list is empty,unable to clear" << endl;
+		return TRUE;
+	}
+	Listclear(L);
+	if (list_length(L) == 0)
+	{
+		std::cout << "      list clear success" << endl;
+		return TRUE;
+	}
+	else
+	{
+		std::cout << " list clear fail " << endl;
+		return FALSE;
+	}
+}
+

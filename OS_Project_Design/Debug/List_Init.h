@@ -23,3 +23,6 @@ int List_insert(NodeList L, int i, int e);
 	/* 在带头结点的双链循环线性表L中第i个位置之前插入元素e，i的合法值为1≤i≤表长+1 */
 int ListDelete(NodeList L, int i);
 	 /* 删除带头结点的双链循环线性表L的第i个元素，i的合法值为1≤i≤表长 */
+
+void Listclear(NodeList &L);
+	/*清空链表*/

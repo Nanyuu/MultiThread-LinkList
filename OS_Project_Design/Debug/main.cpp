@@ -27,29 +27,32 @@ void main()
 	int i = 0;
 	int j =100;
 	int E_Delete=1;
-	cout << "输入1，多线程插入，每次完成显示列表长度" << endl;
-	cout << "输入2, 读取链表，显示其中的所有元素" << endl;
-	cout << "输入3， 删除链表中的最后一个元素" << endl;
-	cout << "输入4，进行多线程读写测试" << endl;
-	cout << "输入5， 输出链表长度" << endl;
-	cout << "输入6，执行单元测试" << endl;
-	cout << "输入7，执行集成测试" << endl;
-	cout << "输入8，执行压力测试" << endl;
+	cout << "输入1，多线程插入，每次完成显示列表长度 MultiThread_Insert" << endl;
+	cout << "输入2, 读取链表，显示其中的所有元素 Read list,show all element" << endl;
+	cout << "输入3， 删除链表中的最后一个元素 Delete the last element" << endl;
+	cout << "输入4，进行多线程读写测试 Do the multithread Read/Write Test" << endl;
+	cout << "输入5， 输出链表长度  Print the length of list" << endl;
+	cout << "输入6，执行单元测试 Unit Testing " << endl;
+	cout << "输入7，执行集成测试 Integration Testing" << endl;
+	cout << "输入8，执行压力测试 Stress Testing" << endl;
+	cout << "输入0，退出。 exit" << endl;
 	for (;;)
 	{
 		
 		cin >> c;
 		system("cls");
-		cout << "输入1，多线程插入，每次完成显示列表长度" << endl;
-		cout << "输入2, 读取链表，显示其中的所有元素" << endl;
-		cout << "输入3， 删除链表中的最后一个元素" << endl;
-		cout << "输入4，进行多线程读写测试" << endl;
-		cout << "输入5， 输出链表长度" << endl;
-		cout << "输入6，执行单元测试" << endl;
-		cout << "输入7，执行集成测试" << endl;
-		cout << "输入8，执行压力测试" << endl;
+		cout << "输入1，多线程插入，每次完成显示列表长度 MultiThread_Insert" << endl;
+		cout << "输入2, 读取链表，显示其中的所有元素 Read list,show all element" << endl;
+		cout << "输入3， 删除链表中的最后一个元素 Delete the last element" << endl;
+		cout << "输入4，进行多线程读写测试 Do the multithread Read/Write Test" << endl;
+		cout << "输入5， 输出链表长度  Print the length of list" << endl;
+		cout << "输入6，执行单元测试 Unit Testing " << endl;
+		cout << "输入7，执行集成测试 Integration Testing" << endl;
+		cout << "输入8，执行压力测试 Stress Testing" << endl;
+		cout << "输入0，退出。 exit" << endl;
 		if (c == '1')
 		{
+			Listclear(L);
 			cout << "u entered 1 " << endl;
 			for (; i < j; i++)
 			{
@@ -99,7 +102,9 @@ void main()
 		}
 		else if (c == '6')
 		{
+			cout << "u entered 6" << endl;
 			int Recall = 0;
+			Listclear(L);
 			cout << "--------------正在执行单元测试！-------------" << endl;
 			cout << "1、执行插入测试" << endl;
 			if (!Test_Insert(L))
@@ -111,6 +116,24 @@ void main()
 			{
 				continue;
 			}
+			cout << "3、执行清空测试" << endl;
+			if (!Test_Clear(L))
+			{
+				continue;
+			}
+		}
+		else if (c == '7')
+		{
+			cout << "u entered 7" << endl;
+			cout << "---------------执行集成测试!----------------" << endl;
+			Read_Write_Test(L);
+
+		}
+		else if (c == '8')
+		{
+			cout << "u entered 8" << endl;
+			cout << "--------------正在执行压力测试！-----------" << endl;
+			Pressure_Test(L);
 		}
 		else
 		{

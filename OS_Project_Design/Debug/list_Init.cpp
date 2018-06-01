@@ -128,3 +128,16 @@ int ListDelete(NodeList L, int i)
 	free(p);
 	return 1;
 }
+
+void Listclear(NodeList &L)
+{
+	NodeList q = L->next;
+	NodeList P = L->next;
+	while (P!=L)
+	{
+		q = P->next;
+		free(P);
+		P = q;
+	}
+	L->next = L->prior = L;
+}
